@@ -1,5 +1,6 @@
 <script>
     import Bootstrap from "../../components/Bootstrap.svelte";
+    import Prism from "../../components/Prism.svelte";
     import Header from "../../components/Header.svelte";
     import Footer from "../../components/Footer.svelte";
     import Main from "../../components/Main.svelte";
@@ -11,11 +12,10 @@
   <title>{frontmatter.title}</title>
   <meta name="description" content={frontmatter.excerpt} />
   <link href={request.permalink} rel="canonical" />
-  <link href="../prism.css" rel="stylesheet" />
-  <script src="../prism.js" defer></script>
 </svelte:head>
 
 <Bootstrap />
+<Prism />
 <Header />
 
 <Main>
