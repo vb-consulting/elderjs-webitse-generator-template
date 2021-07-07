@@ -1,5 +1,5 @@
 $enable-grid-classes: true;
-$enable-shadows: true;
+$enable-shadows: false;
 
 @import "colors.scss";
 
@@ -15,4 +15,8 @@ main {
     & > .container {
         padding: 60px 15px 0;
     }
+}
+
+.token.operator {
+    background: initial;
 }

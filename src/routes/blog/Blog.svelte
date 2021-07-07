@@ -11,6 +11,8 @@
   <title>{frontmatter.title}</title>
   <meta name="description" content={frontmatter.excerpt} />
   <link href={request.permalink} rel="canonical" />
+  <link href="../prism.css" rel="stylesheet" />
+  <script src="../prism.js" defer></script>
 </svelte:head>
 
 <Bootstrap />
@@ -23,10 +25,13 @@
   </div>
 
   {#if html}
-    {@html html}
+    <div class="line-numbers">
+      {@html html}
+    </div>
   {:else}
     <h1>Oops!! Markdown not found!</h1>
   {/if}
 </Main>
 
 <Footer />
+
