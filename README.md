@@ -8,6 +8,7 @@ This is a fork of [Elder.JS Template Project](https://github.com/Elderjs/templat
 - SCSS
 - SEO Check Plugin
 - Blog Engine from Markdown Plugin
+- Prism.JS Syntax Highlighter for the Blog Engine Plugin (with line numbers plugin)
 
 [Elder.JS](https://elderguide.com/tech/elderjs/) is an 'SEO-First' Svelte-Based Framework. Opinionated static site generator and web framework built with SEO in mind. (Supports SSR and Static Site Generation.)
 
