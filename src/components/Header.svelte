@@ -1,9 +1,9 @@
 <script>
-    export const title = "Home";
-    export const fixed = false;
-    export const fluid = false;
-    export const dark = true;
-    export const links = [
+    export let title = "Home";
+    export let fixed = false;
+    export let fluid = false;
+    export let dark = true;
+    export let links = [
         {href: "/pricing", title: "Pricing"},
         {href: "/blog/getting-started", title: "Blog"},
         {href: "/faq", title: "FAQ"}
