@@ -1,6 +1,6 @@
 <script>
-    const year = new Date().getFullYear();
-    const links = [
+    export const year = new Date().getFullYear();
+    export const links = [
         {href: "/pricing", title: "Pricing"},
         {href: "/blog/getting-started", title: "Blog"},
         {href: "/faq", title: "FAQ"}
