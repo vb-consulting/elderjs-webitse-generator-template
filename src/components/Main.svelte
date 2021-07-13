@@ -7,3 +7,10 @@
     </div>
 </main>
 
+<style lang="scss">
+    main {
+        & > .container {
+            padding: 15px 0px 0;
+        }
+    }
+</style>
