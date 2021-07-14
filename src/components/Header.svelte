@@ -22,7 +22,7 @@
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
                     {#each links as link}
                     <li class="nav-item">
-                        <a class="nav-link {link.classes}" href="{link.href}">{link.title}</a>
+                        <a class="nav-link {link.classes ? link.classes : ""}" href="{link.href}">{link.title}</a>
                     </li>
                     {/each}
                 </ul>

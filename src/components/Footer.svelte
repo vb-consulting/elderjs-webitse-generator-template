@@ -12,7 +12,7 @@
         <div class="row justify-content-lg-center">
             {#each links as link}
             <div class="col-lg-auto">
-                <a class="{link.classes}" href="{link.href}">{link.title}</a>
+                <a class="{link.classes ? link.classes : ""}" href="{link.href}">{link.title}</a>
             </div>
             {/each}
         </div>
