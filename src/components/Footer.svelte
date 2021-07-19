@@ -5,6 +5,7 @@
         {href: "/blog/getting-started", title: "Blog"},
         {href: "/faq", title: "FAQ"}
     ];
+    export let url = "";
 </script>
 
 <footer class="footer mt-auto py-3 bg-light text-muted">
@@ -12,7 +13,7 @@
         <div class="row justify-content-lg-center">
             {#each links as link}
             <div class="col-lg-auto">
-                <a class="{link.classes ? link.classes : ""}" href="{link.href}">{link.title}</a>
+                <a class="nav-link {url == link.href ? "active" : ""} {link.classes ? link.classes : ""}" href="{link.href}">{link.title}</a>
             </div>
             {/each}
         </div>
@@ -31,6 +32,12 @@
         opacity: 0.5;
         & .row {
             margin-bottom: 10px;
+            & .nav-link {
+                display: inline-block;
+            }
+            & .nav-link.active {
+                font-weight: bold;
+            }
         }
     }
 </style>

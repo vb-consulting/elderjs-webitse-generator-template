@@ -3,12 +3,14 @@
     import Header from "../../components/Header.svelte";
     import Footer from "../../components/Footer.svelte";
     import Main from "../../components/Main.svelte";
+    export let request;
+    export let settings;
 </script>
 
 <svelte:head>
     <title>Elder.js Home</title>
     <meta name="description" content="Elder.js Starter Template: It's A Tutorial Too!" />
-    <link href="/" rel="canonical" />
+    <link href="{`${settings.origin}${request.permalink}`}" rel="canonical" />
 </svelte:head>
 
 <Bootstrap />
@@ -37,7 +39,7 @@
         </p>
     </div>
 </Main>
-<Footer />
+<Footer url={request.permalink} />
 
 <style lang="scss">
     @import "../styles/colors.scss";

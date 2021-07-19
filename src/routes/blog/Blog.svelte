@@ -1,37 +1,38 @@
 <script>
-    import Bootstrap from "../../components/Bootstrap.svelte";
-    import Prism from "../../components/Prism.svelte";
-    import Header from "../../components/Header.svelte";
-    import Footer from "../../components/Footer.svelte";
-    import Main from "../../components/Main.svelte";
-    export let data, request; // data is mainly being populated from the @elderjs/plugin-markdown
-    const { html, frontmatter } = data;
+  import Bootstrap from "../../components/Bootstrap.svelte";
+  import Prism from "../../components/Prism.svelte";
+  import Header from "../../components/Header.svelte";
+  import Footer from "../../components/Footer.svelte";
+  import Main from "../../components/Main.svelte";
+  export let data;
+  export let request; 
+  export let settings;
+  let { html, frontmatter } = data;
+  html = html.replace("<table>", "<table class=\"table\">");
 </script>
 
 <svelte:head>
-  <title>{frontmatter.title}</title>
-  <meta name="description" content={frontmatter.excerpt} />
-  <link href={request.permalink} rel="canonical" />
+<title>{frontmatter.title}</title>
+<meta name="description" content={frontmatter.description ? frontmatter.description : frontmatter.title} />
+{#if frontmatter.tags}
+<meta name="keywords" content="{frontmatter.tags}">
+{:else}
+<meta name="keywords" content="Blog">
+{/if}
+<link href="{`${settings.origin}${request.permalink}`}" rel="canonical" />
 </svelte:head>
 
 <Bootstrap />
 <Prism />
-<Header />
+<Header url={request.permalink} />
 
-<Main>
-  <div class="title">
-    <h1>{frontmatter.title}</h1>
-    {#if frontmatter.author}<small>By {frontmatter.author}</small>{/if}
-  </div>
+<Main classes={"my-4"}>
 
-  {#if html}
-    <div class="line-numbers">
-      {@html html}
-    </div>
-  {:else}
-    <h1>Oops!! Markdown not found!</h1>
-  {/if}
+<h1>{frontmatter.title}</h1>
+<div class="line-numbers">
+  {@html html}
+</div>
+
 </Main>
 
 <Footer />
-

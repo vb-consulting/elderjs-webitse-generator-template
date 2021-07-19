@@ -1,9 +1,10 @@
 <script>
     export let fluild = false;
+    export let classes = "";
 </script>
 
 <main class="flex-shrink-0">
-    <div class="container{fluild ? "-fluid" : ""}">
+    <div class="container{fluild ? "-fluid" : ""} {classes}">
         <slot></slot>
     </div>
 </main>
@@ -11,7 +12,7 @@
 <style lang="scss">
     main {
         & > .container {
-            padding: 15px 0px 0;
+            padding-top: 56px;
         }
     }
 </style>
