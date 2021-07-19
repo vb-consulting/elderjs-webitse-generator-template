@@ -8,7 +8,7 @@
     export let settings;
     export let data;
 
-    const TITLE = process.env.TITLE || "MyWebSite";
+    const title = process.env.TITLE;
 
     let desc = [];
     let tags = [];
@@ -20,12 +20,12 @@
         tags.push(...blog.tags.split(","));
       }
     }
-    let description = desc.length ? (TITLE + " Blog: " + Array.from(new Set(desc)).join(" ")).substring(0,154) : "Blogs";
+    let description = desc.length ? (title + " Blog: " + Array.from(new Set(desc)).join(" ")).substring(0,154) : "Blogs";
     let keywords = tags.length ? Array.from(new Set(tags)).slice(0, 30).join(", ") : "Blog";
 </script>
 
 <svelte:head>
-  <title>{TITLE} Blogs</title>
+  <title>{title} Blogs</title>
   <meta name="description" content="{description}" />
   <meta name="keywords" content="{keywords}">
   <link href="{`${settings.origin}${request.permalink}`}" rel="canonical" />
@@ -39,7 +39,7 @@
 
 <Main>
 
-  <h1 style="display: none;">{TITLE} Blog</h1>
+  <h1 style="display: none;">{title} Blog</h1>
 
   {#if data.blogs.length}
     <div class="list-group list-group-flush py-5">

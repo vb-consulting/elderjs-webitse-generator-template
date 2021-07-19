@@ -1,6 +1,6 @@
 <script>
     export let fixed = true;
-    export let title = process.env.TITLE || "MyWebSite";;
+    export let title = process.env.TITLE;
     export let fluid = false;
     export let links = [
         {href: "/pricing/", title: "Pricing"},

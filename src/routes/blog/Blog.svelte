@@ -9,6 +9,7 @@
   export let settings;
   let { html, frontmatter } = data;
   html = html.replace("<table>", "<table class=\"table\">");
+  const title = process.env.TITLE;
 </script>
 
 <svelte:head>
@@ -17,7 +18,7 @@
 {#if frontmatter.tags}
 <meta name="keywords" content="{frontmatter.tags}">
 {:else}
-<meta name="keywords" content="Blog">
+<meta name="keywords" content="{title} Blog">
 {/if}
 <link href="{`${settings.origin}${request.permalink}`}" rel="canonical" />
 </svelte:head>
@@ -29,9 +30,9 @@
 <Main classes={"my-4"}>
 
 <h1>{frontmatter.title}</h1>
-<div class="line-numbers">
-  {@html html}
-</div>
+    <div class="line-numbers">
+      {@html html}
+    </div>
 
 </Main>
 
