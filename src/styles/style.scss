@@ -1,0 +1,12 @@
+$enable-grid-classes: true;
+$enable-shadows: false;
+
+@import "colors.scss";
+
+@import "../../node_modules/bootstrap/scss/_functions";
+@import "../../node_modules/bootstrap/scss/_variables";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+html {
+    height: 100% !important;
+}

@@ -5,11 +5,12 @@
     import Main from "../../components/Main.svelte";
     export let request;
     export let settings;
+    const title = process.env.TITLE;
 </script>
 
 <svelte:head>
     <title>Elder.js Home</title>
-    <meta name="description" content="Elder.js Starter Template: It's A Tutorial Too!" />
+    <meta name="description" content="{title} description" />
     <link href="{`${settings.origin}${request.permalink}`}" rel="canonical" />
 </svelte:head>
 
@@ -42,7 +43,7 @@
 <Footer url={request.permalink} />
 
 <style lang="scss">
-    @import "../styles/colors.scss";
+    @import "../../styles/colors.scss";
 
     h1 {
         color: $primary;

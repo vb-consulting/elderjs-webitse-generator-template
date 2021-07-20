@@ -36,7 +36,7 @@
 </header>
 
 <style lang="scss">
-    @import "../../styles/colors.scss";
+    @import "../styles/colors.scss";
     
     .navbar-toggler:focus {
         text-decoration: initial; 

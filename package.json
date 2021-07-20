@@ -12,9 +12,9 @@
     "eslint": "eslint --ext .js .",
     "eslint:fix": "eslint --fix --ext .js .",
     "prettier:svelte": "prettier --write --plugin-search-dir=. ./**/*.svelte",
-    "scss-build-compressed": "node-sass ./styles/style.scss ./assets/style.css --output-style compressed && node-sass ./styles/prism.scss ./assets/prism.css --output-style compressed",
-    "scss-build-uncompressed": "node-sass ./styles/style.scss ./assets/style.css && node-sass ./styles/prism.scss ./assets/prism.css --output-style",
-    "scss-watch": "node-sass ./styles/style.scss ./assets/style.css --watch --recursive",
+    "scss-build-compressed": "node-sass ./src/styles/style.scss ./assets/style.css --output-style compressed && node-sass ./src/styles/prism.scss ./assets/prism.css --output-style compressed",
+    "scss-build-uncompressed": "node-sass ./src/styles/style.scss ./assets/style.css && node-sass ./src/styles/prism.scss ./assets/prism.css --output-style",
+    "scss-watch": "node-sass ./src/styles/style.scss ./assets/style.css --watch --recursive",
     "upgrade-npms": "ncu --upgrade && npm install",
     "copy-assets": "node ./src/copy-assets.js"
   },
