@@ -29,12 +29,9 @@
   <meta name="description" content="{description}" />
   <meta name="keywords" content="{keywords}">
   <link href="{`${settings.origin}${request.permalink}`}" rel="canonical" />
-  <script src="https://unpkg.com/javascript-time-ago@2.3.8/bundle/javascript-time-ago.js"></script>
-  <script>window.TimeAgo || document.write('<script src="../time-ago.js">\x3C/script>')</script>
 </svelte:head>
 
 <Bootstrap />
-<TimeAgo hydrate-client={{ }} hydrate-options={{ loading: 'lazy'}} />
 <Header url={request.permalink} />
 
 <Main>
@@ -85,3 +82,5 @@
 </Main>
 
 <Footer url={request.permalink} />
+
+<TimeAgo hydrate-client={{ }} hydrate-options={{ loading: 'lazy'}} />
