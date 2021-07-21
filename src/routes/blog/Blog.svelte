@@ -8,7 +8,7 @@
   export let request; 
   export let settings;
   let { html, frontmatter } = data;
-  html = html.replace("<table>", "<table class=\"table\">");
+  html = html.replace(/<table>/g, "<table class=\"table\">");
   const title = process.env.TITLE;
 </script>
 
