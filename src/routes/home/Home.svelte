@@ -15,6 +15,7 @@
 </svelte:head>
 
 <Bootstrap />
+<!-- use this to enable certain bootstrap features <Bootstrap hydrate-client={{ tooltips: true }} /> -->
 <Header />
 <Main>
     <div class="text-center">

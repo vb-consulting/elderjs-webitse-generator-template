@@ -32,10 +32,10 @@
 </svelte:head>
 
 <Bootstrap />
+<TimeAgo hydrate-client={{ }} />
+
 <Header url={request.permalink} />
-
 <Main>
-
   <h1 style="display: none;">{title} Blog</h1>
 
   {#if data.blogs.length}
@@ -78,9 +78,6 @@
       No blogs yet. Come back later.
     </div>
   {/if}
-
 </Main>
-
 <Footer url={request.permalink} />
 
-<TimeAgo hydrate-client={{ }} hydrate-options={{ loading: 'lazy'}} />
