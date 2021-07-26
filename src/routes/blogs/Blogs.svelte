@@ -32,7 +32,7 @@
 </svelte:head>
 
 <Bootstrap />
-<TimeAgo hydrate-client={{ }} />
+<TimeAgo />
 
 <Header url={request.permalink} />
 <Main>

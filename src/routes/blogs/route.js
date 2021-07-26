@@ -55,7 +55,9 @@ async function getBlogsData() {
 module.exports = {
   data: async ({ request }) => {
       return {
-        blogs: await getBlogsData()
+        blogs: await getBlogsData(),
+        timeAgo: true,
+        bootstrapTooltips: true
       }
     },
   all: () => [{ slug: '/' }],
